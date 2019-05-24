@@ -21,8 +21,8 @@
   <div class="container" style="padding: 20px 0px;">
     <div id="app">
       <ul class="list-group" style="column-count:2;">
-        <li v-for="todo in todos">
-          {{ todo.name }}
+        <li v-for="member in members" class="list-group-item">
+          {{ member.name }}
         </li>
       </ul>
     </div>
@@ -31,11 +31,7 @@
       let app = new Vue({
         el: '#app',
         data: {
-          todos: [
-            { code: '1', name: '学习 JavaScript' },
-            { code: '2', name: '学习 Vue' },
-            { code: '3', name: '整个牛项目' }
-          ]
+          members: members
         }
       });
     </script>

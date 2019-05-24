@@ -1,10 +1,8 @@
 const members = [
-  { code: '001', name: 'test001' }
-  , { code: '002', name: 'test002' }
-  , { code: '003', name: 'test003' }
-  , { code: '004', name: 'test004' }
-  , { code: '005', name: 'test005' }
-  , { code: '006', name: 'test006' }
-  , { code: '007', name: 'test007' }
+  { code: '001', name: '第1个中奖的b' }
+  , { code: '002', name: '第2个中奖的b' }
+  , { code: '003', name: '第3个中奖的b' }
+  , { code: '004', name: '第4个中奖的b' }
+  , { code: '005', name: '第5个中奖的b' }
 ]
 export { members };
