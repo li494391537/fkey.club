@@ -31,7 +31,18 @@
       let app = new Vue({
         el: '#app',
         data: {
-          members: members
+          members: []
+        },
+        methods: {
+          roll: function () {
+
+          },
+          shuffle: function (arr) {
+            let after = [];
+            for (let i = 0; i < arr.length; i+=1 ) {
+              after[i] = arr[i];
+            }
+          }
         }
       });
     </script>
