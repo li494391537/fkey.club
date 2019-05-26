@@ -20,8 +20,9 @@
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   <div class="container" style="padding: 20px 0px;">
     <div id="app">
+      <button class="btn btn-primary" style="margin: 0px 0px 10px 0px" @click="roll">test</button>
       <ul class="list-group" style="column-count:2;">
-        <li v-for="member in members" class="list-group-item">
+        <li class="list-group-item" v-for="member in members">
           {{ member.name }}
         </li>
       </ul>
@@ -35,13 +36,19 @@
         },
         methods: {
           roll: function () {
-
-          },
-          shuffle: function (arr) {
-            let after = [];
-            for (let i = 0; i < arr.length; i+=1 ) {
-              after[i] = arr[i];
+            for (let i = 0; i < 5; i++) {
+              let rnd = this.random(i, members.length - 1);
+              this.swap(members, i, rnd);
+              this.$set(this.members, i, members[i]);
             }
+          },
+          random: function (start, end) {
+            return Math.floor(Math.random() * (end - start + 1) + start);
+          },
+          swap: function (array, i, j) {
+            let tmp = array[i];
+            array[i] = array[j];
+            array[j] = tmp;
           }
         }
       });
